@@ -1,0 +1,11 @@
+Tasks:
+- update gemfile [DONE]
+- change directory in Terminal [DONE]
+- bundle install [DONE]
+- create Rakefile [DONE]
+- create config.ru [DONE]
+- create app file [DONE]
+- create university db [DONE]
+	- create professors table [DONE]
+	- create courses table [DONE]
+	- create subjects table [DONE]

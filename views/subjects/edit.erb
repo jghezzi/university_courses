@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Subjects</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+	<h1>
+		Update "<%= @edit_subject.description %>" to...
+	</h1>
+
+	<form action="/subjects/<%= @edit_subject.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<input type="text" id="subject_name" name="subject[description]" placeholder="<%= @edit_subject.description %>">
+	<input type="submit">
+
+</body>
+</html>

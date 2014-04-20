@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Courses</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+<div class="jumbotron">
+		<% @courses.each do |course| %>
+		<li class="list-group-item"><%= course.course_name %>
+	
+	<a href="/courses/<%= course.id %>/edit" class="btn btn-xs btn-success"> Edit </a>
+
+	<a href="/courses/<%= course.id %>/show" class="btn btn-xs btn-success"> Delete</a></li>
+	
+	<% end %>
+	<p><button onclick="window.location.href='/courses/new'"class="btn btn-primary btn-lg">add a course »</button></p>
+</div>
+</body>
+</html>

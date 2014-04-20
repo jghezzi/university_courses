@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Join</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+	<h1>
+		Update <%= @join_course.course_name %>: -- Professor ID: <%= @join_course.professor_id %> to...
+	</h1>
+
+	<form action="/join/<%= @join_course.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<input type="text" id="professor_id" name="course[professor_id]" placeholder="<%= @join_course.professor_id %>">
+	<input type="submit">
+
+</body>
+</html>

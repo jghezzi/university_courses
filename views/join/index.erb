@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Join</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+<div class="jumbotron">
+		<% @courses.each do |course| %>
+		<li class="list-group-item"><%= course.course_name %> --- Professor ID: <%= course.professor_id %>
+	
+	<a href="/join/<%= course.id %>/edit" class="btn btn-xs btn-success"> Change / Assign Professor ID </a>
+	
+	<% end %>
+
+</div>
+</body>
+</html>

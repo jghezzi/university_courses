@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Courses</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+	<h1>
+		Update "<%= @edit_course.course_name %>" to...
+	</h1>
+
+	<form action="/courses/<%= @edit_course.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<input type="text" id="course_name" name="course[course_name]" placeholder="<%= @edit_course.course_name %>">
+	<input type="submit">
+
+</body>
+</html>

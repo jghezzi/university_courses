@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Subjects</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+<div class="jumbotron">
+		<% @subjects.each do |subject| %>
+		<li class="list-group-item"><%= subject.description %>
+	
+	<a href="/subjects/<%= subject.id %>/edit" class="btn btn-xs btn-success"> Edit </a>
+
+	<a href="/subjects/<%= subject.id %>/show" class="btn btn-xs btn-success"> Delete</a></li>
+	
+	<% end %>
+	<p><button onclick="window.location.href='/subjects/new'"class="btn btn-primary btn-lg">add a subject »</button></p>
+</div>
+</body>
+</html>

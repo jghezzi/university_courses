@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Professors</title>
+</head>
+
+<body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+<div class="jumbotron">
+<ul>
+	<% @professors.each do |professor| %>
+	
+	<li class="list-group-item"><%= professor.professor_name %>
+	
+	<a href="/professors/<%= professor.id %>/edit" class="btn btn-xs btn-success"> Edit </a>
+
+	<a href="/professors/<%= professor.id %>/show" class="btn btn-xs btn-success"> Delete</a></li>
+	
+	<% end %>
+	<p><button onclick="window.location.href='/professors/new'"class="btn btn-primary btn-lg">add a professor »</button></p>
+
+</ul>
+</div>
+</body>
+</html>

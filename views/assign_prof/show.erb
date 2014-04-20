@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Assign A Professor</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="/application.css">
+	<ul>
+		<p>COURSES</p>	
+		-------
+		<% @courses.each do |course| %>
+		<li class="list-group-item"><%= course.course_name%>: <%= course.professor_id %><a href="/courses/<%= course.professor_id %>/edit" class="btn btn-xs btn-success">   Add / Change Professor</a></li>
+		<% end %>
+
+
+		<p>PROFESSORS</p>
+		----------
+		<% @professors.each do |professor| %>
+	<li><%= professor.professor_name %> : <%= professor.professor_id %></li>
+	<% end %>
+	</ul>
+
+      </div>
+<form action="/courses" method="post">
+		<input type="text" id="course_name" name="courses[course_name]" placeholder="Add Course Name">
+		<input type="submit">
+	</form>
+
+</body>
+</html>

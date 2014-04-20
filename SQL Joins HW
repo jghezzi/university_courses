@@ -1,0 +1,21 @@
+SELECT professors.professor_name, courses.course_name
+FROM courses
+INNER JOIN professors on courses.professor_id = professors.id;
+
+SELECT * 
+FROM courses
+INNER JOIN subjects ON subjects.course_id = courses.course_id
+INNER JOIN professors ON professors.professor_id = courses.professor_id
+WHERE professor_name LIKE "%Doctor%"
+
+SELECT * 
+FROM subjects
+WHERE subject_id >= 3
+
+SELECT * 
+FROM professors
+WHERE professor_id >4 AND professor_name LIKE "%Doc%"
+
+SELECT * 
+FROM subjects
+WHERE description LIKE "%y"

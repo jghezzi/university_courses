@@ -1,0 +1,34 @@
+	select movies.title, cast_members.characte_name, actors.name
+from movies
+inner join cast_member on movies.id = cast_member.movie_id
+inner join actors on cast_members.actor_id = actors.id;
+
+
+MyModel.where("name LIKE '?%'", params[:search])
+
+HW 
+
+Build a new app in Sinatra with query stuff:
+
+Courses at university
+
+three different tables
+
+professors, courses, subjects
+
+be able to query on stuff
+
+write in straight SQL
+
+sql lite at least five separate queries, 
+
+
+ToDo.where('description = ?, params[:search]')
+
+ToDo.where('INNER JOIN users ON to_dos.user_id = isers.id WHERE users.name = = ?, params[:search]')
+
+sam as:
+
+select * from to_dos
+inner join users on to_dos.user_id = users.id
+where users.name = '?'
